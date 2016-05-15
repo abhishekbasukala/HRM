@@ -15,6 +15,9 @@
 	<context:component-scan base-package="com.hrm" />
 	<tx:annotation-driven transaction-manager="transactionManager" />
 	
+	<!-- Spring Data JPA by default looks for an EntityManagerFactory named 
+		entityManagerFactory -->
+	<!-- <jpa:repositories base-package="your.package" entity-manager-factory-ref="emf"/> -->
 	<jpa:repositories base-package="com.hrm.repository"/>
 
 	<bean

@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.hrm.domain.Address;
 import com.hrm.domain.Employee;
-import com.hrm.repository.EmployeeRepository;
 import com.hrm.service.EmployeeService;
 
 @Controller
@@ -21,7 +20,7 @@ public class EmployeeController {
 	@Autowired
 	EmployeeService employeeService;
 
-	@RequestMapping(value = "/")
+	@RequestMapping(value = {"/","/homePage"})
 	public String homePage() {
 		return "homePage";
 	}
@@ -49,5 +48,7 @@ public class EmployeeController {
 		model.addAttribute("employee", emp);
 		return "employeeList";
 	}
+	
+	
 
 }

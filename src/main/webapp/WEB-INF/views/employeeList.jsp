@@ -41,13 +41,14 @@
 					<td width="20%">${employee.sex}</td>
 					<td width="20%">${employee.email}</td>
 					<td width="20%">${employee.contactNumber}</td>
-					<td width="20%">${employee.street}</td>
-					<td width="20%">${employee.city}</td>
-					<td width="20%">${employee.state}</td>
-					<td width="20%">${employee.zip}</td>
-					<td width="20%">${employee.country}</td>
-					
-					<td width="20%"><a href="/${employee.employeeId}">edit</a></td>
+					<td width="20%">${employee.address.street}</td>
+					<td width="20%">${employee.address.city}</td>
+					<td width="20%">${employee.address.state}</td>
+					<td width="20%">${employee.address.zip}</td>
+					<td width="20%">${employee.address.country}</td>
+					<td width="20%">${employee.joinDate}</td>
+					<td width="20%">${employee.endDate}</td>
+					<td width="20%"><a href="${pageContext.request.contextPath}/employeeList/${employee.employeeId}">edit</a></td>
 				</tr>
 			</c:forEach>
 		</tbody>

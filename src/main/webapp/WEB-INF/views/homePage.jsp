@@ -8,7 +8,8 @@
 </head>
 <body>
 <h1>This is Home Page</h1>
-<a href="addEmployee">Add New Employees</a>
-<a href="employeeList">List of Employee</a>
+<a href="addEmployee">Add New Employees</a><br>
+<a href="employeeList">List of Employee</a><br>
+<a href="${pageContext.request.contextPath}/EmployeeTimeSheet">Employee Time-sheet</a>
 </body>
 </html>
