@@ -27,10 +27,9 @@ public class Employee {
 	@Temporal(TemporalType.DATE)
 	private Date dob;
 	private String sex;
-	private String maritalStatus;
 	private String email;
 	private String contactNumber;
-	@OneToOne(cascade=CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "addressId")
 	private Address address;
 	@Temporal(TemporalType.DATE)
@@ -38,7 +37,7 @@ public class Employee {
 	@Temporal(TemporalType.DATE)
 	private Date endDate;
 	private boolean Status;
-	@ManyToOne(cascade=CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinTable(name = "Employee_Department", joinColumns = @JoinColumn(name = "employeeId"), inverseJoinColumns = @JoinColumn(name = "departmentId"))
 	private Department department;
 
@@ -46,14 +45,13 @@ public class Employee {
 
 	}
 
-	public Employee(String firstName, String lastName, Date dob, String sex, String maritalStatus, String email,
-			String contactNumber, Address address, Date joinDate, Date endDate, boolean status) {
+	public Employee(String firstName, String lastName, Date dob, String sex, String email, String contactNumber,
+			Address address, Date joinDate, Date endDate, boolean status) {
 
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.dob = dob;
 		this.sex = sex;
-		this.maritalStatus = maritalStatus;
 		this.email = email;
 		this.contactNumber = contactNumber;
 		this.address = address;
@@ -106,14 +104,6 @@ public class Employee {
 
 	public void setSex(String sex) {
 		this.sex = sex;
-	}
-
-	public String getMaritalStatus() {
-		return maritalStatus;
-	}
-
-	public void setMaritalStatus(String maritalStatus) {
-		this.maritalStatus = maritalStatus;
 	}
 
 	public String getEmail() {
