@@ -27,6 +27,8 @@
 				<th width="20%">Country</th>
 				<th width="20%">Join Date</th>
 				<th width="20%">End Date</th>
+				<th width="20%">Department Name</th>
+				<th width="20%">Designation</th>
 
 			</tr>
 		</thead>
@@ -48,6 +50,9 @@
 					<td width="20%">${employee.address.country}</td>
 					<td width="20%">${employee.joinDate}</td>
 					<td width="20%">${employee.endDate}</td>
+					<td width="20%">${employee.department.departmentName}</td>
+					<td width="20%">${employee.department.designation}</td>
+					
 					<td width="20%">
 						<form action="${pageContext.request.contextPath}/editEmployee/${employee.employeeId}"
 								method="get">

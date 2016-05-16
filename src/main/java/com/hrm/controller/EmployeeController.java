@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,17 +28,20 @@ public class EmployeeController {
 	}
 
 	@RequestMapping(value = "/addEmployee", method = RequestMethod.GET)
-	public String getAddEmployee() {
+	public String getAddEmployee(Model model) {
+		Employee employee=new Employee();
+		model.addAttribute("employee",employee);
 		return "addEmployee";
 	}
 
 	@RequestMapping(value = "/addEmployee", method = RequestMethod.POST)
-	public String saveEmployee(@RequestParam("street") String street, @RequestParam("city") String city,
-			@RequestParam("state") String state, @RequestParam("zip") int zip, @RequestParam("country") String country,
+	public String saveEmployee(
+			
 			@ModelAttribute("employee") Employee employee) {
 
-		Address address = new Address(street, city, state, zip, country);
-		employee.setAddress(address);
+		/*Address address = new Address(street, city, state, zip, country);
+		employee.setAddress(address);*/
+		 
 		employeeService.saveEmployee(employee);
 		return "redirect:/employeeList";
 

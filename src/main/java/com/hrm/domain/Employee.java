@@ -38,7 +38,7 @@ public class Employee {
 	@Temporal(TemporalType.DATE)
 	private Date endDate;
 	private boolean Status;
-	@ManyToOne
+	@ManyToOne(cascade=CascadeType.ALL)
 	@JoinTable(name = "Employee_Department", joinColumns = @JoinColumn(name = "employeeId"), inverseJoinColumns = @JoinColumn(name = "departmentId"))
 	private Department department;
 

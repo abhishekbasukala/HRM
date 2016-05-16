@@ -12,7 +12,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="tbl_department")
+@Table(name = "tbl_department")
 public class Department {
 	@Id
 	@GeneratedValue
@@ -21,14 +21,14 @@ public class Department {
 	@Enumerated(EnumType.STRING)
 	private Designation designation;
 
-	@OneToMany(mappedBy = "department",cascade=CascadeType.ALL)
+	@OneToMany(mappedBy = "department", cascade = CascadeType.ALL)
 	private List<Employee> employees;
-	
-	public Department(){}
 
-	public Department(long departmentId, String departmentName, Designation designation) {
-		super();
-		this.departmentId = departmentId;
+	public Department() {
+	}
+
+	public Department(String departmentName, Designation designation) {
+
 		this.departmentName = departmentName;
 		this.designation = designation;
 	}
