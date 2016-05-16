@@ -7,5 +7,7 @@ import com.hrm.domain.Employee;
 
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
+	
+	Employee findByEmployeeId(int id);
 
 }

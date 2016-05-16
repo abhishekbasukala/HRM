@@ -28,5 +28,20 @@ public class EmployeeService {
 		return employeeRepository.findAll();
 	}
 	
+	@Transactional
+	public Employee getEmployee(int id){
+		return employeeRepository.findByEmployeeId(id);
+	}
+	@Transactional
+	public void updateEmployee(int id,Employee employee){
+		employee.setEmployeeId(id);
+		employeeRepository.save(employee);
+	}
+	
+	public void deleteEmployee(int id,Employee employee){
+		employee.setEmployeeId(id);
+		employeeRepository.delete(employee);
+	}
+	
 
 }

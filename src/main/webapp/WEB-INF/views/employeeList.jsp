@@ -48,7 +48,18 @@
 					<td width="20%">${employee.address.country}</td>
 					<td width="20%">${employee.joinDate}</td>
 					<td width="20%">${employee.endDate}</td>
-					<td width="20%"><a href="${pageContext.request.contextPath}/employeeList/${employee.employeeId}">edit</a></td>
+					<td width="20%">
+						<form action="${pageContext.request.contextPath}/editEmployee/${employee.employeeId}"
+								method="get">
+								<button>Edit</button>
+						</form>
+					</td>		
+					<td width="20%">
+						<form action="${pageContext.request.contextPath}/delete/${employee.employeeId}"
+								method="post">
+								<button>Delete</button>
+						</form>
+					</td>	
 				</tr>
 			</c:forEach>
 		</tbody>

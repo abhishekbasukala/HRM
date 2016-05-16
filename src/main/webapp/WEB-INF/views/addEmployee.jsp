@@ -13,19 +13,67 @@
 		modelAttribute="employee">
 		<fieldset>
 			<legend>Add New Employees:</legend>
-			First Name:<input type="text" name="firstName"> <br>
-			Last Name:<input type="text" name="lastName"> <br> DOB:<input
-				type="date" name="dob"> <br> Sex:<input type="text"
-				name="sex"> <br> Email:<input type="text" name="email">
-			<br> Contact Number:<input type="text" name="contactNumber">
-			<br> Street:<input type="text" name="street"><br>
-			City:<input type="text" name="city"> <br> State:<input
-				type="text" name="state"> <br> Zip:<input type="text"
-				name="zip"><br> Country:<input type="text"
-				name="country"> <br> Join Date:<input type="date"
-				name="joinDate"> <br> End Date:<input type="date"
-				name="endDate"> <br> <br> <input type="submit"
-				value="Submit">
+				<table>
+					<tr>
+						<td>First Name:</td>
+						<td><input type="text" name="firstName"> <td>
+					</tr>
+					<tr>
+						<td>Last Name:</td>
+						<td><input type="text" name="lastName"> </td>
+					</tr>
+					<tr>
+				 		<td>DOB:</td>
+				 		<td><input type="date" name="dob"> </td>
+					</tr>
+					<tr>	 
+						 <td>Sex:</td>
+				 		<td><input type="text" name="sex"> </td>
+					</tr>	
+					<tr>
+						<td>Email: </td>
+						<td><input type="text" name="email"></td>
+					</tr>	
+					<tr> 
+			 			<td>Contact Number:</td>
+						<td><input type="text" name="contactNumber"></td>
+					</tr>
+					<tr> 
+						<td>Street:</td>
+						<td><input type="text" name="street"></td>
+					</tr>
+					<tr>
+						<td>City:</td>
+						<td><input type="text" name="city"></td> 
+					</tr>
+					<tr>
+						<td>State:</td>
+						<td><input type="text" name="state"> </td>
+					</tr>
+					<tr>
+						<td>Zip:</td>
+						<td><input type="text" name="zip"></td>
+					</tr> 
+					<tr>
+						<td>Country:</td>
+						<td><input type="text" name="country"> </td>
+					</tr>	
+					<tr>
+						<td> Join Date:</td>
+						<td><input type="date" name="joinDate"> </td>
+					</tr>	
+					<tr>	 
+				 		<td>End Date:</td>
+				 		<td><input type="date" name="endDate"> </td>
+					</tr>	
+					<tr>
+						<td>Department:</td>
+						
+					</tr>
+					<tr>	
+						<td><input type="submit" value="Submit"></td>
+					</tr>	
+				</table>
 		</fieldset>
 	</form>
 
