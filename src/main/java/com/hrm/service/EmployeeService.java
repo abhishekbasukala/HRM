@@ -43,5 +43,11 @@ public class EmployeeService {
 		employeeRepository.delete(employee);
 	}
 	
+	public Employee checkLoginInfo(Employee employee){
+		Employee emp=employeeRepository.findByEmail(employee.getEmail());
+		System.out.println(emp.getEmployeeId());
+		return emp;
+	}
+	
 
 }

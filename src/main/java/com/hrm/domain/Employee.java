@@ -14,6 +14,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+
+
 @Entity
 @Table(name = "tbl_employee")
 public class Employee {
@@ -22,11 +24,11 @@ public class Employee {
 	@GeneratedValue
 	private int employeeId;
 	private String firstName;
-
 	private String lastName;
 	@Temporal(TemporalType.DATE)
 	private Date dob;
 	private String sex;
+	
 	private String email;
 	private String contactNumber;
 	@OneToOne(cascade = CascadeType.ALL)
@@ -36,6 +38,7 @@ public class Employee {
 	private Date joinDate;
 	@Temporal(TemporalType.DATE)
 	private Date endDate;
+	private String password;
 	private boolean Status;
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinTable(name = "Employee_Department", joinColumns = @JoinColumn(name = "employeeId"), inverseJoinColumns = @JoinColumn(name = "departmentId"))
@@ -144,6 +147,15 @@ public class Employee {
 
 	public void setEndDate(Date endDate) {
 		this.endDate = endDate;
+	}
+
+	
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public boolean isStatus() {

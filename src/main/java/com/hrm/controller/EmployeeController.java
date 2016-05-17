@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.hrm.domain.Address;
 import com.hrm.domain.Employee;
@@ -35,9 +36,7 @@ public class EmployeeController {
 	}
 
 	@RequestMapping(value = "/addEmployee", method = RequestMethod.POST)
-	public String saveEmployee(
-			
-			@ModelAttribute("employee") Employee employee) {
+	public String saveEmployee(@ModelAttribute("employee") Employee employee) {
 
 		/*Address address = new Address(street, city, state, zip, country);
 		employee.setAddress(address);*/
@@ -70,12 +69,15 @@ public class EmployeeController {
 	}
 	
 	@RequestMapping(value="/delete/{id}", method= RequestMethod.POST)
-	public String deleteEmployee(@PathVariable("id") int id, @ModelAttribute(value = "employee") Employee employee){
+	public String deleteEmployee(@PathVariable("id") int id, @ModelAttribute(value = "employee") Employee employee,RedirectAttributes redirectAttributes){
 		
+		redirectAttributes.addFlashAttribute("deleteMessage",employee.getFirstName()+"has been deleted");
 		employeeService.deleteEmployee(id, employee);
 		return"redirect:/employeeList";
 		
 	}
+
+	
 	
 
 }

@@ -7,22 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="/login" method="post">
-	<fieldset>
-		<legend>Log In</legend>
-		<table>
-			<tr>
-				<td>Username:</td>
-				<td><input type="text" name="username"/></td>
-			</tr>
-			<tr>
-				<td>Password:</td>
-				<td><input type="text" name="password"/></td>
-			</tr>
-		</table>
-	</fieldset>
-</form>
-
+<h1>This is Main Page</h1>
+	
+	<form action="${pageContext.request.contextPath}/login" method="get">
+		<button>Log In</button>
+	</form>
 
 </body>
 </html>

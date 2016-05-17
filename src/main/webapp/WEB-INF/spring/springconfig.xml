@@ -19,6 +19,8 @@
 		entityManagerFactory -->
 	<!-- <jpa:repositories base-package="your.package" entity-manager-factory-ref="emf"/> -->
 	<jpa:repositories base-package="com.hrm.repository"/>
+	
+	<import resource="securityconfig.xml"/>
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">

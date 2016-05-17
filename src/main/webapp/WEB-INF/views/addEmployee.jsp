@@ -66,6 +66,11 @@
 				 		<td>End Date:</td>
 				 		<td><input type="date" name="endDate"> </td>
 					</tr>	
+					<tr>	 
+				 		<td>Password:</td>
+				 		<td><input type="password" name="password"> </td>
+					</tr>	
+					
 					<tr>
 						<td>Department:</td>
 						<td><select name="department.departmentName">
@@ -92,6 +97,13 @@
 					</tr>	
 				</table>
 		</fieldset>
+	</form>
+	
+	<form action="${pageContext.request.contextPath}/homePage" method="get">
+		<button>Back To Home</button>
+	</form>
+	<form action="${pageContext.request.contextPath}/employeeList" method="get">
+		<button>Back To List</button>
 	</form>
 
 </body>

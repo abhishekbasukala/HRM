@@ -9,5 +9,7 @@ import com.hrm.domain.Employee;
 public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 	
 	Employee findByEmployeeId(int id);
+	
+	Employee findByEmail(String email);
 
 }

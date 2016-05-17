@@ -9,6 +9,12 @@
 </head>
 <body>
 	<h1>List of Employees</h1>
+	
+	<div><p>${deleteMessage}</p></div>
+	<form action="${pageContext.request.contextPath}/addEmployee" method="get">
+		<button>Add New Employee</button>
+	</form>
+	<br>
 
 	<table class="resultsTable" border="1" bordercolor="grey"
 		cellpadding="0" cellspacing="0" width="100%" height="50%">
@@ -69,8 +75,12 @@
 			</c:forEach>
 		</tbody>
 	</table>
+	
+	<br>
 
-	<a href="addEmployee"> Add new Employee</a>
+	<form action="${pageContext.request.contextPath}/homePage" method="get">
+		<button>Back To Home</button>
+	</form>
 
 </body>
 </html>

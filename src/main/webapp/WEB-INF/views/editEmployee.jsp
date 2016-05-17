@@ -64,6 +64,29 @@
 					<tr>	 
 				 		<td>End Date:</td>
 				 		<td><input type="date" name="endDate" value="${employee.endDate}"> </td>
+					</tr>
+					<tr>
+						<td>Department:</td>
+						<td><select name="department.departmentName">
+								<option  value="${employee.department.departmentName}">${employee.department.departmentName}</option>
+								<option  value="IT Department">IT Department</option>
+								<option  value="HR Department">HR Department</option>
+								<option  value="Support Department">Support Department</option>
+								<option  value="Marketing Department">Marketing Department</option>
+							</select>
+						</td>	
+					</tr>
+					<tr>
+						<td>Designation:</td>
+						<td><select name="department.designation">
+								<option value="${employee.department.designation}">${employee.department.designation}</option>
+								<option value="SUPERVISOR">SUPERVISOR</option>
+								<option value="DIRECTOR">DIRECTOR</option>
+								<option value="HR">HR</option>
+								<option value="DEVELOPER">DEVELOPER</option>
+								<option value="DESIGNER">DESIGNER</option>
+							</select>
+						</td>	
 					</tr>	
 					<tr>	
 						<td><input type="submit" value="Submit"></td>
